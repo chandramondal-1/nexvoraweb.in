@@ -77,7 +77,7 @@ export default function CreatorsGridSection({ onDemoClick }: { onDemoClick: () =
   );
 
   return (
-    <section ref={sectionRef} className="section-container bg-white overflow-hidden">
+    <section ref={sectionRef} className="max-w-[1200px] mx-auto px-6 py-12 md:py-20 bg-white overflow-hidden">
       <div className="grid md:grid-cols-[55%_45%] gap-12 items-center">
         {/* Left Column - Scrolling Logo Grid */}
         <div className="flex gap-4 justify-center">

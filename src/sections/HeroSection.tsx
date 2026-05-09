@@ -111,13 +111,11 @@ export default function HeroSection() {
 
         {/* Main Title */}
         <h1 className="hero-title text-white font-black text-5xl md:text-6xl lg:text-7xl leading-[1.1] max-w-4xl">
-          AI Powered
+          Turning <span className="text-white/90">Ideas</span>
           <br />
-          <span className="relative inline-block">
-            Websites <span className="text-white/90">&amp;</span> Apps
-          </span>
+          Into <span className="relative inline-block underline decoration-white/20 underline-offset-8">Digital</span>
           <br />
-          for Creators
+          Success
         </h1>
 
         {/* Rotating Subtitle */}

@@ -8,12 +8,6 @@ interface DemoModalProps {
 }
 
 export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    projectDescription: '',
-  });
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -26,14 +20,6 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
       document.body.style.overflow = 'auto';
     }
   }, [isOpen]);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add success feedback or close modal
-    alert('Thank you! We will get back to you soon.');
-    onClose();
-  };
 
   if (!isOpen) return null;
 
@@ -62,28 +48,28 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
             <X className="w-6 h-6 text-gray-500" />
           </button>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
+            <input type="hidden" name="access_key" value="f0433b5c-a16e-4229-8510-32b44d0456b6" />
+            
             <div>
               <label className="block text-xl font-bold text-gray-900 mb-2">Name</label>
               <input
                 required
                 type="text"
+                name="name"
                 placeholder="Enter your name"
                 className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:border-[#F65235] focus:ring-2 focus:ring-[#F65235]/20 outline-none transition-all"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
             </div>
 
             <div>
-              <label className="block text-xl font-bold text-gray-900 mb-2">Phone</label>
+              <label className="block text-xl font-bold text-gray-900 mb-2">Email</label>
               <input
                 required
-                type="tel"
-                placeholder="Enter your phone number"
+                type="email"
+                name="email"
+                placeholder="Enter your email"
                 className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:border-[#F65235] focus:ring-2 focus:ring-[#F65235]/20 outline-none transition-all"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               />
             </div>
 
@@ -91,11 +77,10 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
               <label className="block text-xl font-bold text-gray-900 mb-2">Project Description</label>
               <textarea
                 required
+                name="message"
                 rows={3}
                 placeholder="Tell us about your project"
                 className="w-full px-4 py-4 rounded-xl border border-gray-200 focus:border-[#F65235] focus:ring-2 focus:ring-[#F65235]/20 outline-none transition-all resize-none"
-                value={formData.projectDescription}
-                onChange={(e) => setFormData({ ...formData, projectDescription: e.target.value })}
               />
             </div>
 
@@ -103,7 +88,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
               type="submit"
               className="w-full bg-[#F65235] text-white text-xl font-bold py-5 rounded-2xl shadow-lg hover:bg-[#E5432A] transition-all transform hover:scale-[1.02] active:scale-[0.98]"
             >
-              Submit
+              Submit Form
             </button>
           </form>
         </div>

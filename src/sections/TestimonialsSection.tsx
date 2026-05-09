@@ -87,11 +87,11 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="stories" className="section-container bg-white">
-      <div className="grid md:grid-cols-[35%_65%] gap-12">
+    <section ref={sectionRef} id="stories" className="max-w-[1200px] mx-auto px-6 py-12 md:py-20 bg-white">
+      <div className="grid md:grid-cols-[30%_70%] gap-8 md:gap-12">
         {/* Left Column */}
-        <div className="testimonials-left sticky top-32 self-start">
-          <h2 className="section-title text-black mb-4">
+        <div className="testimonials-left md:sticky md:top-32 self-start mb-8 md:mb-0">
+          <h2 className="text-3xl md:text-5xl font-black text-black mb-4 leading-tight">
             Don&apos;t just take
             <br />
             our <span className="text-[#F65235]">word</span>
@@ -102,7 +102,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Right Column - Testimonials List */}
-        <div className="testimonials-list space-y-4 max-h-[800px] overflow-y-auto no-scrollbar">
+        <div className="testimonials-list space-y-4">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
