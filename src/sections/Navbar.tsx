@@ -50,14 +50,24 @@ export default function Navbar({ onDemoClick }: { onDemoClick?: () => void }) {
     >
       <div className="max-w-[1200px] mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-[#F65235] rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path d="M7 3L3 7L7 11" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M3 7H14C17.866 7 21 10.134 21 14V14C21 17.866 17.866 21 14 21H10" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-110">
+            <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FF9500" />
+                  <stop offset="50%" stopColor="#FF5200" />
+                  <stop offset="100%" stopColor="#FF0000" />
+                </linearGradient>
+              </defs>
+              <path d="M20 80L40 20L60 60L80 20V80" stroke="url(#logo-grad)" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M30 80L50 20L70 80" stroke="url(#logo-grad)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" opacity="0.5" />
             </svg>
           </div>
-          <span className="text-xl font-bold tracking-tight">NEXVORA</span>
+          <div className="flex flex-col">
+            <span className="text-2xl font-black tracking-tight text-black italic">Nexvora</span>
+            <span className="text-[7px] font-bold tracking-[0.2em] text-gray-400 -mt-1 uppercase">Build. Launch. Grow.</span>
+          </div>
         </Link>
 
         {/* Nav Links */}
