@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Youtube } from 'lucide-react';
+import { Linkedin, Instagram } from 'lucide-react';
 import { Link } from 'react-router';
 
 const footerLinks = [
@@ -73,14 +73,6 @@ export default function Footer() {
               className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#F65235] hover:border-[#F65235] transition-colors"
             >
               <Instagram className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.youtube.com/@appxofficial"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#F65235] hover:border-[#F65235] transition-colors"
-            >
-              <Youtube className="w-5 h-5" />
             </a>
           </div>
         </div>
