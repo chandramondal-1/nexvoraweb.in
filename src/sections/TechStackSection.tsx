@@ -5,12 +5,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const stackItems = [
-  { label: 'Website' },
+  { label: 'React Websites' },
   { label: 'iOS App' },
   { label: 'Android App' },
   { label: 'Content Security' },
   { label: 'Mac/Desktop App' },
 ];
+
 
 export default function TechStackSection() {
   const sectionRef = useRef<HTMLElement>(null);

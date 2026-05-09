@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router';
 import Home from './pages/Home';
 import ServicePage from './pages/ServicePage';
 import PortfolioPage from './pages/PortfolioPage';
+import LegalPage from './pages/LegalPage';
 
 const PlaceholderPage = ({ title }: { title: string }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -22,6 +23,10 @@ export default function App() {
       <Route path="/blog" element={<PlaceholderPage title="Blog" />} />
       <Route path="/about" element={<PlaceholderPage title="About Us" />} />
       <Route path="/contact" element={<PlaceholderPage title="Contact" />} />
+      <Route path="/refund-policy" element={<LegalPage pageId="refund-policy" />} />
+      <Route path="/terms-and-conditions" element={<LegalPage pageId="terms-and-conditions" />} />
+      <Route path="/privacy-policy" element={<LegalPage pageId="privacy-policy" />} />
     </Routes>
   );
 }
+

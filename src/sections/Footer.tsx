@@ -1,12 +1,13 @@
 import { Linkedin, Instagram, Youtube } from 'lucide-react';
+import { Link } from 'react-router';
 
 const footerLinks = [
-  { label: 'FAQs', href: '#faqs' },
-  { label: 'Refund Policy', href: '#' },
-  { label: 'Contact Us', href: '#' },
-  { label: 'Success Stories', href: '#stories' },
-  { label: 'Terms and Conditions', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
+  { label: 'FAQs', href: '/#faqs' },
+  { label: 'Refund Policy', href: '/refund-policy' },
+  { label: 'Contact Us', href: '/contact' },
+  { label: 'Success Stories', href: '/#stories' },
+  { label: 'Terms and Conditions', href: '/terms-and-conditions' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
 ];
 
 export default function Footer() {
@@ -16,7 +17,7 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-[#F65235] rounded-lg flex items-center justify-center">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M7 3L3 7L7 11" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -24,18 +25,18 @@ export default function Footer() {
               </svg>
             </div>
             <span className="text-xl font-bold tracking-tight">NEXVORA</span>
-          </a>
+          </Link>
 
           {/* Nav Links */}
           <nav className="flex flex-wrap items-center justify-center gap-6">
             {footerLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="text-sm text-gray-600 hover:text-[#F65235] transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
