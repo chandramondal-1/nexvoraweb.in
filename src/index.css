@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 9 91% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 9 91% 58%;
+    --radius: 0.75rem;
+    --nexvora-primary: #F65235;
+    --nexvora-primary-dark: #E5432A;
+    --nexvora-black: #000000;
+    --nexvora-dark-grey: #2D2D2D;
+    --nexvora-medium-grey: #6B6B6B;
+    --nexvora-light-grey: #F5F5F5;
+    --nexvora-card-grey: #EBEBEB;
+    --nexvora-white: #FFFFFF;
+    --nexvora-star-yellow: #FFD93D;
+    --nexvora-cyan: #00D4FF;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .pill-button {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-200;
+  }
+
+  .pill-button-primary {
+    @apply pill-button bg-[#F65235] text-white hover:bg-[#E5432A] hover:scale-[1.02];
+  }
+
+  .pill-button-white {
+    @apply pill-button bg-white text-black shadow-lg hover:scale-[1.02] hover:shadow-xl;
+  }
+
+  .section-container {
+    @apply max-w-[1200px] mx-auto px-6 py-20;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-extrabold tracking-tight;
+  }
+
+  .text-primary-accent {
+    @apply text-[#F65235];
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .scroll-reveal {
+    @apply opacity-0 translate-y-8;
+  }
+}
+
+/* Slot machine animation */
+.slot-machine-text {
+  display: inline-flex;
+  flex-direction: column;
+  height: 1.4em;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.slot-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.slot-item {
+  height: 1.4em;
+  line-height: 1.4em;
+}
+
+/* Hide scrollbar for chrome, safari and opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
