@@ -241,21 +241,23 @@ export default function RevenueSection() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="feature-card flex flex-col items-start group cursor-pointer"
+            className="feature-card flex flex-col items-start group cursor-pointer bg-[#F8F9FA] p-5 rounded-[32px] border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <div 
-              className="relative w-full aspect-[0.9/1] mb-8 rounded-[48px] overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-2"
+              className="relative w-full aspect-[0.9/1] mb-6 rounded-[24px] overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-[1.02]"
               style={{ backgroundColor: feature.bgColor }}
             >
               {renderIllustration(feature.illustration, feature.title)}
             </div>
             
-            <h3 className="text-xl md:text-2xl font-bold text-black mb-3 px-1 leading-tight">
-              {feature.title}
-            </h3>
-            <p className="text-[16px] text-gray-500 leading-relaxed px-1 font-medium">
-              {feature.description}
-            </p>
+            <div className="px-2 pb-2">
+              <h3 className="text-xl md:text-2xl font-bold text-black mb-3 leading-tight">
+                {feature.title}
+              </h3>
+              <p className="text-[15px] text-gray-500 leading-relaxed font-medium">
+                {feature.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
