@@ -7,15 +7,7 @@ import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 
-const PlaceholderPage = ({ title }: { title: string }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-6xl font-black mb-4 text-[#F65235]">{title}</h1>
-      <p className="text-xl text-gray-500 italic">Coming Soon - Important for SEO & Traffic!</p>
-      <a href="/" className="mt-8 inline-block text-black font-bold underline">Back to Home</a>
-    </div>
-  </div>
-);
+
 
 export default function App() {
   return (

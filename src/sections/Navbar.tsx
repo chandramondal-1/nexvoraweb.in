@@ -26,7 +26,7 @@ const portfolio = [
   { label: 'Testimonials', icon: <MessageSquare className="w-4 h-4" />, description: 'Client feedback' },
 ];
 
-export default function Navbar({ onDemoClick }: { onDemoClick: () => void }) {
+export default function Navbar({ onDemoClick }: { onDemoClick?: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
