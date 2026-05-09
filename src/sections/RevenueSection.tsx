@@ -481,7 +481,7 @@ export default function RevenueSection() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="feature-card flex flex-col items-start group cursor-pointer bg-[#F8F9FA] p-5 rounded-[32px] border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            className="feature-card flex flex-col items-start group cursor-pointer bg-[#F8F9FA] p-5 rounded-[32px] border border-gray-200 hover:shadow-xl transition-shadow duration-300"
           >
             <div 
               className="relative w-full aspect-[0.9/1] mb-6 rounded-[24px] overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:scale-[1.02]"
