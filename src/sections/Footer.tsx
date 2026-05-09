@@ -59,7 +59,7 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/company/appxin/mycompany/"
+              href="https://www.linkedin.com/in/nexvora-web-8396453b7?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#F65235] hover:border-[#F65235] transition-colors"
@@ -67,7 +67,7 @@ export default function Footer() {
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="https://www.instagram.com/appxforcreators/"
+              href="https://www.instagram.com/nexvoraweb.in?igsh=MTZjeTF6ZjBucTQwOQ%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#F65235] hover:border-[#F65235] transition-colors"
