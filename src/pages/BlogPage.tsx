@@ -73,24 +73,24 @@ export default function BlogPage() {
 
         {/* Featured Post (Optional first post) */}
         <div className="max-w-[1200px] mx-auto px-6 mb-20">
-           <div className="group relative rounded-[40px] overflow-hidden bg-gray-900 aspect-[21/9] flex items-end p-8 md:p-16">
+           <div className="group relative rounded-[32px] md:rounded-[40px] overflow-hidden bg-gray-900 aspect-[4/3] md:aspect-[21/9] flex items-end p-6 md:p-16">
               <img 
                 src={blogPosts[0].image} 
                 alt="Featured post" 
                 className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="relative z-10 max-w-2xl">
-                <span className="inline-block px-4 py-1.5 rounded-full bg-[#F65235] text-white text-xs font-bold uppercase tracking-wider mb-4">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-[#F65235] text-white text-[10px] md:text-xs font-bold uppercase tracking-wider mb-4">
                   Featured
                 </span>
-                <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+                <h2 className="text-2xl md:text-5xl font-black text-white mb-4 leading-tight">
                   {blogPosts[0].title}
                 </h2>
-                <p className="text-white/80 text-lg mb-8 line-clamp-2">
+                <p className="text-white/80 text-base md:text-lg mb-6 md:mb-8 line-clamp-2 hidden sm:block">
                   {blogPosts[0].excerpt}
                 </p>
-                <button className="flex items-center gap-2 text-white font-bold group/btn">
-                  Read Article <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                <button className="flex items-center gap-2 text-white font-bold group/btn text-sm md:text-base">
+                  Read Article <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
            </div>

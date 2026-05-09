@@ -49,11 +49,11 @@ export default function StatsSection() {
       <div className="section-container">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left Column */}
-          <div className="stats-left">
+          <div className="stats-left text-center md:text-left">
             <h2 className="section-title text-black mb-4">
               We let the
-              <br />
-              <span className="text-[#F65235]">numbers</span> talk
+              <br className="hidden md:block" />
+              <span className="text-[#F65235]"> numbers</span> talk
             </h2>
             <p className="text-gray-500 text-lg">
               One platform, boundless possibilities for creators

@@ -44,21 +44,23 @@ export default function BuildBrandSection({ onGetStartedClick }: BuildBrandSecti
     <section ref={sectionRef} className="section-container bg-white">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column */}
-        <div className="brand-left">
+        <div className="brand-left text-center md:text-left">
           <h2 className="section-title text-black mb-6">
             Build Your <span className="text-[#F65235]">Own</span> Brand
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-md leading-relaxed">
+          <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto md:mx-0 leading-relaxed">
             Turn your audience into a thriving community without any coding
             skills, with a digital platform that's unique
           </p>
-          <button 
-            onClick={onGetStartedClick}
-            className="pill-button-primary"
-          >
-            Get Started
-            <ArrowRight className="w-5 h-5" />
-          </button>
+          <div className="flex justify-center md:justify-start">
+            <button 
+              onClick={onGetStartedClick}
+              className="pill-button-primary"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Right Column - Illustration */}

@@ -114,7 +114,7 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
         </div>
 
         {/* Main Title */}
-        <h1 className="hero-title text-white font-black text-5xl md:text-6xl lg:text-7xl leading-[1.1] max-w-4xl">
+        <h1 className="hero-title text-white font-black text-4xl md:text-6xl lg:text-7xl leading-[1.1] max-w-4xl">
           Turning <span className="text-white/90">Ideas</span>
           <br />
           Into <span className="relative inline-block underline decoration-white/20 underline-offset-8">Digital</span>
@@ -123,10 +123,10 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
         </h1>
 
         {/* Rotating Subtitle */}
-        <div className="hero-subtitle mt-8 flex items-center justify-center gap-3 text-white text-3xl md:text-4xl font-bold">
+        <div className="hero-subtitle mt-6 md:mt-8 flex items-center justify-center gap-2 md:gap-3 text-white text-2xl md:text-4xl font-bold">
           <span>Earn via</span>
-          <span className="inline-flex items-center gap-2">
-            <span className="text-2xl">₹</span>
+          <span className="inline-flex items-center gap-1.5 md:gap-2">
+            <span className="text-xl md:text-2xl">₹</span>
             <span className="slot-machine-text relative">
               <span
                 ref={slotRef}
@@ -146,16 +146,16 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
         </div>
 
         {/* Buttons */}
-        <div className="hero-buttons flex items-center gap-4 mt-10">
+        <div className="hero-buttons flex flex-col sm:flex-row items-center gap-4 mt-10">
           <button 
             onClick={onGetStartedClick}
-            className="pill-button-white px-8 py-3.5 font-semibold shadow-xl"
+            className="w-full sm:w-auto pill-button-white px-8 py-3.5 font-semibold shadow-xl"
           >
             Get Started
           </button>
           <button 
             onClick={onGetStartedClick}
-            className="pill-button-white px-8 py-3.5 font-semibold shadow-xl"
+            className="w-full sm:w-auto pill-button-white px-8 py-3.5 font-semibold shadow-xl"
           >
             Learn More
           </button>
@@ -163,11 +163,11 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
       </div>
 
       {/* Creator Cards */}
-      <div className="hero-cards relative w-full max-w-5xl mx-auto px-6 mt-8">
-        <div className="relative flex justify-center items-end gap-0">
+      <div className="hero-cards relative w-full max-w-5xl mx-auto px-6 mt-12 md:mt-8 overflow-hidden md:overflow-visible">
+        <div className="relative flex justify-center items-end gap-0 scale-75 md:scale-100 origin-bottom">
           {/* Left card - tilted */}
           <div
-            className="relative w-[200px] md:w-[260px] rounded-t-3xl overflow-hidden border-4 border-pink-500 bg-pink-400 transform -rotate-6 translate-x-8 z-10 shadow-2xl"
+            className="relative w-[180px] md:w-[260px] rounded-t-3xl overflow-hidden border-4 border-pink-500 bg-pink-400 transform -rotate-6 translate-x-12 z-10 shadow-2xl"
             style={{ aspectRatio: '3/4' }}
           >
             <img
@@ -179,7 +179,7 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
 
           {/* Center card - main */}
           <div
-            className="relative w-[220px] md:w-[300px] rounded-t-3xl overflow-hidden border-4 border-cyan-400 bg-cyan-300 z-20 shadow-2xl -mb-4"
+            className="relative w-[200px] md:w-[300px] rounded-t-3xl overflow-hidden border-4 border-cyan-400 bg-cyan-300 z-20 shadow-2xl -mb-4"
             style={{ aspectRatio: '3/4' }}
           >
             <img
@@ -191,7 +191,7 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
 
           {/* Right card - tilted */}
           <div
-            className="relative w-[200px] md:w-[260px] rounded-t-3xl overflow-hidden border-4 border-green-400 bg-green-300 transform rotate-6 -translate-x-8 z-10 shadow-2xl"
+            className="relative w-[180px] md:w-[260px] rounded-t-3xl overflow-hidden border-4 border-green-400 bg-green-300 transform rotate-6 -translate-x-12 z-10 shadow-2xl"
             style={{ aspectRatio: '3/4' }}
           >
             <img
