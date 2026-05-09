@@ -190,11 +190,6 @@ const EcommerceIllustration = () => (
 
 const EbooksIllustration = () => (
   <div className="relative w-full h-full flex items-center justify-center p-4">
-    {/* Grid Background Pattern */}
-    <div className="absolute top-4 left-4 w-24 h-24 opacity-40">
-      <div className="w-full h-full" style={{ backgroundImage: 'linear-gradient(white 1.5px, transparent 1.5px), linear-gradient(90deg, white 1.5px, transparent 1.5px)', backgroundSize: '16px 16px' }} />
-    </div>
-    
     {/* Main Window */}
     <div className="relative w-[85%] aspect-[1.1/1] bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-[2px] border-black -translate-x-1 -translate-y-3">
       {/* Top Bar */}
