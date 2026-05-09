@@ -58,7 +58,7 @@ export default function BuildBrandSection() {
         <div className="brand-right relative">
           <div className="relative rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/images/build-brand.jpg"
+              src="images/build-brand.jpg"
               alt="Monetize Your Knowledge"
               className="w-full h-auto rounded-2xl"
             />

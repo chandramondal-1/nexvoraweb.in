@@ -163,7 +163,7 @@ export default function HeroSection() {
             style={{ aspectRatio: '3/4' }}
           >
             <img
-              src="/images/hero-creators.jpg"
+              src="images/hero-creators.jpg"
               alt="Creator testimonial"
               className="w-full h-full object-cover object-left"
             />
@@ -175,7 +175,7 @@ export default function HeroSection() {
             style={{ aspectRatio: '3/4' }}
           >
             <img
-              src="/images/hero-creators.jpg"
+              src="images/hero-creators.jpg"
               alt="Creator testimonial"
               className="w-full h-full object-cover object-center"
             />
@@ -187,7 +187,7 @@ export default function HeroSection() {
             style={{ aspectRatio: '3/4' }}
           >
             <img
-              src="/images/hero-creators.jpg"
+              src="images/hero-creators.jpg"
               alt="Creator testimonial"
               className="w-full h-full object-cover object-right"
             />
