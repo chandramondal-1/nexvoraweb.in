@@ -18,12 +18,6 @@ const features = [
     illustration: 'ecommerce',
   },
   {
-    title: 'E-books & Test Series',
-    description: 'Transform your expertise into digital resources',
-    bgColor: '#D946EF',
-    illustration: 'ebooks',
-  },
-  {
     title: 'Portfolio Websites',
     description: 'Showcase your skills and projects with stunning portfolios that leave a lasting impression.',
     bgColor: '#F97316',
