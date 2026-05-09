@@ -18,7 +18,14 @@ const features = [
     illustration: 'ecommerce',
   },
   {
+    title: 'E-books & Test Series',
+    description: 'Transform your expertise into digital resources',
+    bgColor: '#D946EF', // Fuchsia/Purple
+    illustration: 'ebooks',
+  },
+  {
     title: 'Portfolio Websites',
+
     description: 'Showcase your skills and projects with stunning portfolios that leave a lasting impression.',
     bgColor: '#FFE5D4', // Peach
   },
@@ -176,6 +183,50 @@ const EcommerceIllustration = () => (
   </div>
 );
 
+const EbooksIllustration = () => (
+  <div className="relative w-full h-full flex items-center justify-center p-4">
+    {/* Grid Background Pattern */}
+    <div className="absolute top-4 left-4 w-24 h-24 opacity-40">
+      <div className="w-full h-full" style={{ backgroundImage: 'linear-gradient(white 1.5px, transparent 1.5px), linear-gradient(90deg, white 1.5px, transparent 1.5px)', backgroundSize: '16px 16px' }} />
+    </div>
+    
+    {/* Main Window */}
+    <div className="relative w-[85%] aspect-[1.1/1] bg-white rounded-xl shadow-xl overflow-hidden flex flex-col border-[2px] border-black -translate-x-1 -translate-y-3">
+      {/* Top Bar */}
+      <div className="h-9 bg-[#FDE68A] flex items-center justify-between px-3 border-b-[2px] border-black">
+        <div className="w-3.5 h-3.5 rounded-full border-[2px] border-black bg-transparent" />
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5" strokeLinecap="round">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </div>
+      
+      {/* Content */}
+      <div className="flex-1 p-4 flex flex-col relative bg-gray-50/50">
+        <div className="w-full flex justify-end mb-2 pr-2">
+          <div className="bg-[#2563EB] text-white text-[10px] font-bold px-3 py-1.5 rounded flex items-center gap-1 shadow-sm">
+            Add New
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+        </div>
+        
+        <div className="w-[85%] bg-white rounded border border-gray-200 shadow-sm flex flex-col z-10 self-center">
+          <div className="px-4 py-2.5 text-[11px] font-medium text-gray-800 border-b border-gray-100">E-Book</div>
+          <div className="px-4 py-2.5 text-[11px] font-medium text-gray-800 border-b border-gray-100">Docs & Ebooks</div>
+          <div className="px-4 py-2.5 text-[11px] font-medium text-gray-800">Syllabus</div>
+        </div>
+      </div>
+    </div>
+    
+    {/* Download Button */}
+    <div className="absolute bottom-5 right-2 bg-[#FFD93D] px-4 py-2.5 rounded border-[2.5px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2 z-20">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+      </svg>
+      <span className="text-[12px] font-black text-black tracking-wider">DOWNLOAD</span>
+    </div>
+  </div>
+);
+
 export default function RevenueSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -213,6 +264,9 @@ export default function RevenueSection() {
         return <BusinessIllustration />;
       case 'ecommerce':
         return <EcommerceIllustration />;
+      case 'ebooks':
+        return <EbooksIllustration />;
+
       default:
         return (
           <div className="w-[80%] h-[80%] rounded-[32px] bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center p-6">
