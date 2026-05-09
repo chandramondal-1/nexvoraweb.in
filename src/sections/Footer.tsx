@@ -49,11 +49,11 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-6 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <div className="text-sm text-gray-500">
-            <p>© 2024 NEXVORA. All rights reserved</p>
+            <p>© 2026 NEXVORA. All rights reserved</p>
             <p className="mt-1">
               Address: Priska Pride Tower, A-42/4, 7th Floor, Block-A, Sector 62, Noida, Uttar Pradesh - 201301
             </p>
-            <p className="mt-1">Ph. No: +91 7206392937</p>
+            <p className="mt-1">Ph. No: +91 7811089216</p>
           </div>
 
           {/* Social Icons */}
