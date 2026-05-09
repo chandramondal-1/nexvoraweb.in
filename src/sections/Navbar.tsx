@@ -147,22 +147,24 @@ export default function Navbar({ onDemoClick }: { onDemoClick?: () => void }) {
             <Link to="/contact" className="text-[15px] font-semibold text-gray-700 hover:text-[#F65235] transition-colors">Contact</Link>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 md:gap-3">
             {/* CTA Button */}
             <button 
               onClick={onDemoClick}
-              className="pill-button-primary text-[13px] md:text-sm bg-[#F65235] hover:bg-[#d4432a] border-none px-4 md:px-6 py-2 md:py-2.5 flex items-center gap-2 group"
+              className="pill-button-primary text-[12px] md:text-sm bg-[#F65235] hover:bg-[#d4432a] border-none px-3 md:px-6 py-2 md:py-2.5 flex items-center gap-2 group"
             >
-              <span className="font-bold whitespace-nowrap">Schedule demo</span>
+              <span className="font-bold whitespace-nowrap hidden xs:block">Schedule demo</span>
+              <span className="font-bold whitespace-nowrap xs:hidden">Demo</span>
               <ArrowRight className="w-3.5 h-3.5 hidden sm:block group-hover:translate-x-1 transition-transform" />
             </button>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile Menu Toggle (Three Lines) */}
             <button 
-              className="lg:hidden p-2 text-gray-600 hover:text-black transition-colors"
+              className="lg:hidden p-2.5 bg-gray-50 rounded-xl text-gray-900 hover:bg-gray-100 transition-all border border-gray-100"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle Menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" strokeWidth={2.5} />}
             </button>
           </div>
         </div>
