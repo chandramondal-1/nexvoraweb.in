@@ -34,8 +34,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar onDemoClick={toggleModal} />
-      <HeroSection />
-      <BuildBrandSection />
+      <HeroSection onGetStartedClick={toggleModal} />
+      <BuildBrandSection onGetStartedClick={toggleModal} />
       <RevenueSection />
       <TechStackSection />
       <StatsSection />

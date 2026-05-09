@@ -5,7 +5,11 @@ import { ArrowRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function BuildBrandSection() {
+interface BuildBrandSectionProps {
+  onGetStartedClick?: () => void;
+}
+
+export default function BuildBrandSection({ onGetStartedClick }: BuildBrandSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -48,10 +52,13 @@ export default function BuildBrandSection() {
             Turn your audience into a thriving community without any coding
             skills, with a digital platform that's unique
           </p>
-          <a href="#cta" className="pill-button-primary">
+          <button 
+            onClick={onGetStartedClick}
+            className="pill-button-primary"
+          >
             Get Started
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </button>
         </div>
 
         {/* Right Column - Illustration */}

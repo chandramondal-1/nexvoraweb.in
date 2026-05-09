@@ -11,7 +11,11 @@ const rotatingWords = [
   'Paid Communities',
 ];
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  onGetStartedClick?: () => void;
+}
+
+export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
   const slotRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const [currentWord, setCurrentWord] = useState(0);
@@ -143,10 +147,16 @@ export default function HeroSection() {
 
         {/* Buttons */}
         <div className="hero-buttons flex items-center gap-4 mt-10">
-          <button className="pill-button-white px-8 py-3.5 font-semibold shadow-xl">
+          <button 
+            onClick={onGetStartedClick}
+            className="pill-button-white px-8 py-3.5 font-semibold shadow-xl"
+          >
             Get Started
           </button>
-          <button className="pill-button-white px-8 py-3.5 font-semibold shadow-xl">
+          <button 
+            onClick={onGetStartedClick}
+            className="pill-button-white px-8 py-3.5 font-semibold shadow-xl"
+          >
             Learn More
           </button>
         </div>
