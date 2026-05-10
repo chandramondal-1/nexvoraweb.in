@@ -1,14 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { 
-  Bot, 
   Cpu, 
   Database, 
   Zap, 
-  Search, 
   Layout, 
-  Code2, 
   ShieldCheck,
-  BrainCircuit,
   Boxes,
   Microscope,
   Sparkles,
