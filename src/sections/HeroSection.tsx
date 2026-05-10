@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
+import { Link } from 'react-router';
 
 const rotatingWords = [
   'E-books',
@@ -153,12 +154,12 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
           >
             Get Started
           </button>
-          <button 
-            onClick={onGetStartedClick}
-            className="w-full sm:w-auto pill-button-white px-8 py-3.5 font-semibold shadow-xl"
+          <Link 
+            to="/customise"
+            className="w-full sm:w-auto pill-button-white px-8 py-3.5 font-semibold shadow-xl text-center"
           >
-            Learn More
-          </button>
+            Customise
+          </Link>
         </div>
       </div>
 
@@ -171,7 +172,7 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
             style={{ aspectRatio: '3/4' }}
           >
             <img
-              src="images/hero-creators.jpg"
+              src="/nexvoraweb.in/images/hero-creators.jpg"
               alt="Creator testimonial"
               className="w-full h-full object-cover object-left"
             />
@@ -183,7 +184,7 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
             style={{ aspectRatio: '3/4' }}
           >
             <img
-              src="images/hero-creators.jpg"
+              src="/nexvoraweb.in/images/hero-creators.jpg"
               alt="Creator testimonial"
               className="w-full h-full object-cover object-center"
             />
@@ -195,7 +196,7 @@ export default function HeroSection({ onGetStartedClick }: HeroSectionProps) {
             style={{ aspectRatio: '3/4' }}
           >
             <img
-              src="images/hero-creators.jpg"
+              src="/nexvoraweb.in/images/hero-creators.jpg"
               alt="Creator testimonial"
               className="w-full h-full object-cover object-right"
             />

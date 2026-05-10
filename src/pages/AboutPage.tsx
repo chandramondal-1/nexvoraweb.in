@@ -73,6 +73,46 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Team Section */}
+        <div className="max-w-[1200px] mx-auto px-6 mb-32">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-4">Meet Our <span className="text-[#F65235]">Team</span></h2>
+            <p className="text-gray-500 text-lg">The visionary minds leading the digital revolution at Nexvora.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {/* Arif Hussain */}
+            <div className="group">
+              <div className="relative overflow-hidden rounded-[2.5rem] bg-gray-100 mb-8 aspect-[4/5] shadow-2xl">
+                <img 
+                  src="/nexvoraweb.in/images/arif-new.png" 
+                  alt="Arif Hussain" 
+                  className="w-full h-full object-cover transition-all duration-700 scale-110 group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+              <h3 className="text-3xl font-black text-black mb-2">Arif Hussain</h3>
+              <p className="text-[#F65235] font-black uppercase tracking-widest text-sm mb-4">Co-Founder & Digital Strategist</p>
+              <p className="text-gray-600 leading-relaxed">Helping businesses grow online with smart ideas, strong branding, and modern websites.</p>
+            </div>
+
+            {/* Surya Mondal */}
+            <div className="group">
+              <div className="relative overflow-hidden rounded-[2.5rem] bg-gray-100 mb-8 aspect-[4/5] shadow-2xl">
+                <img 
+                  src="/nexvoraweb.in/images/surya-mondal.png" 
+                  alt="Surya Mondal" 
+                  className="w-full h-full object-cover transition-all duration-700 scale-110 group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+              <h3 className="text-3xl font-black text-black mb-2">Surya Mondal</h3>
+              <p className="text-[#F65235] font-black uppercase tracking-widest text-sm mb-4">Co-Founder & Lead Developer</p>
+              <p className="text-gray-600 leading-relaxed">Building fast, modern, and easy-to-use websites with clean design and smooth performance.</p>
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="max-w-[1000px] mx-auto px-6">
           <div className="bg-[#F65235] rounded-[40px] p-12 md:p-20 text-center text-white relative overflow-hidden">

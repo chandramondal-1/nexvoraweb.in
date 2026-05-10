@@ -28,6 +28,17 @@ const serviceData: Record<string, any> = {
     ],
     pricing: 'Starting from ₹14,999',
   },
+  'app-development': {
+    title: 'App Development',
+    subtitle: 'Create powerful, native-feel mobile applications for iOS and Android.',
+    benefits: [
+      'Native & Hybrid development (React Native/Flutter)',
+      'Seamless API & Backend integration',
+      'Modern, intuitive UI/UX patterns',
+      'App Store & Play Store deployment assistance',
+    ],
+    pricing: 'Starting from ₹49,999',
+  },
   // Add more as needed
 };
 

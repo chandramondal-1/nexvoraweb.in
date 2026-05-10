@@ -6,10 +6,7 @@ import HeroSection from '../sections/HeroSection';
 import BuildBrandSection from '../sections/BuildBrandSection';
 import RevenueSection from '../sections/RevenueSection';
 import TechStackSection from '../sections/TechStackSection';
-import StatsSection from '../sections/StatsSection';
-import TestimonialsSection from '../sections/TestimonialsSection';
-import CreatorsGridSection from '../sections/CreatorsGridSection';
-import BackedBySection from '../sections/BackedBySection';
+import PricingSection from '../sections/PricingSection';
 import FaqSection from '../sections/FaqSection';
 import CtaBannerSection from '../sections/CtaBannerSection';
 import Footer from '../sections/Footer';
@@ -19,6 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     // Refresh ScrollTrigger after all components mount
@@ -29,7 +27,15 @@ export default function Home() {
     };
   }, []);
 
-  const toggleModal = () => setIsModalOpen(!isModalOpen);
+  const toggleModal = () => {
+    if (isModalOpen) setSelectedPlan(undefined);
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const handlePlanSelect = (plan: string) => {
+    setSelectedPlan(plan);
+    setIsModalOpen(true);
+  };
 
   return (
     <main className="min-h-screen bg-white">
@@ -38,15 +44,16 @@ export default function Home() {
       <BuildBrandSection onGetStartedClick={toggleModal} />
       <RevenueSection />
       <TechStackSection />
-      <StatsSection />
-      <TestimonialsSection />
-      <CreatorsGridSection onDemoClick={toggleModal} />
-      <BackedBySection />
+      <PricingSection onPlanSelect={handlePlanSelect} />
       <FaqSection />
       <CtaBannerSection onDemoClick={toggleModal} />
       <Footer />
       
-      <DemoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <DemoModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        selectedPlan={selectedPlan}
+      />
     </main>
   );
 }

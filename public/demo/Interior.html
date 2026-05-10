@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VESTA | Luxury Interior Design & Bespoke Spaces</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Tenor+Sans&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --beige: #f4f1ea;
+            --charcoal: #1c1c1c;
+            --accent: #d4a373;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--beige);
+            color: var(--charcoal);
+            overflow-x: hidden;
+        }
+        .heading { font-family: 'Syncopate', sans-serif; }
+        .serif { font-family: 'Tenor Sans', serif; }
+        
+        .line-reveal {
+            position: relative;
+            overflow: hidden;
+        }
+        .line-reveal::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--beige);
+            transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1);
+        }
+        .line-reveal.active::after {
+            transform: translateX(101%);
+        }
+        
+        .image-zoom-container {
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .image-zoom {
+            transition: transform 2s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .image-zoom:hover {
+            transform: scale(1.1);
+        }
+        
+        .magnetic-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid var(--charcoal);
+            transition: all 0.3s ease;
+        }
+        .magnetic-btn:hover {
+            background: var(--charcoal);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-[#f4f1ea]">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 py-8 px-12 flex justify-between items-center mix-blend-difference text-white">
+        <div class="heading font-bold text-2xl tracking-tighter">VESTA</div>
+        <div class="hidden md:flex gap-12 text-[10px] font-bold uppercase tracking-[0.3em]">
+            <a href="#" class="hover:opacity-50 transition-opacity">Portfolio</a>
+            <a href="#" class="hover:opacity-50 transition-opacity">Philosophy</a>
+            <a href="#" class="hover:opacity-50 transition-opacity">Contact</a>
+        </div>
+        <button class="w-8 h-8 flex flex-col justify-between items-end group">
+            <div class="w-full h-px bg-white group-hover:w-1/2 transition-all"></div>
+            <div class="w-1/2 h-px bg-white group-hover:w-full transition-all"></div>
+            <div class="w-3/4 h-px bg-white group-hover:w-full transition-all"></div>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="h-screen flex flex-col justify-end px-12 pb-24 relative overflow-hidden">
+        <div class="absolute inset-0 z-[-1]">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover brightness-75" id="hero-img">
+        </div>
+        
+        <div class="max-w-6xl w-full">
+            <h1 class="heading text-6xl md:text-9xl text-white font-bold leading-none mb-12 stagger-hero">
+                CRAFTING <br> <span class="serif italic font-light opacity-80">EMOTION</span>
+            </h1>
+            <div class="flex flex-col md:flex-row justify-between items-end gap-12">
+                <p class="text-white/60 text-lg max-w-lg font-light leading-relaxed stagger-hero">We design bespoke living environments that resonate with your identity and elevate the human experience through architectural precision.</p>
+                <div class="magnetic-btn cursor-pointer stagger-hero">
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Start Project</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-48 px-12 bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-24">
+            <div class="flex-1 space-y-12">
+                <h4 class="text-xs font-bold uppercase tracking-[0.5em] text-[#d4a373]">What we do</h4>
+                <h2 class="heading text-5xl md:text-7xl font-bold leading-tight">Comprehensive <br> Interior Mastery</h2>
+                <div class="space-y-8 pt-12">
+                    <div class="group border-t border-black/10 pt-10 pb-4 cursor-pointer overflow-hidden">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="serif text-3xl italic">01</span>
+                            <h3 class="heading text-xl font-bold uppercase">Residential</h3>
+                        </div>
+                        <p class="text-gray-400 h-0 opacity-0 group-hover:h-12 group-hover:opacity-100 transition-all duration-500">Creating private sanctuaries that define modern luxury living.</p>
+                    </div>
+                    <div class="group border-t border-black/10 pt-10 pb-4 cursor-pointer overflow-hidden">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="serif text-3xl italic">02</span>
+                            <h3 class="heading text-xl font-bold uppercase">Commercial</h3>
+                        </div>
+                        <p class="text-gray-400 h-0 opacity-0 group-hover:h-12 group-hover:opacity-100 transition-all duration-500">Strategic environments designed to boost productivity and brand identity.</p>
+                    </div>
+                    <div class="group border-t border-black/10 pt-10 pb-4 cursor-pointer overflow-hidden">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="serif text-3xl italic">03</span>
+                            <h3 class="heading text-xl font-bold uppercase">Bespoke Furniture</h3>
+                        </div>
+                        <p class="text-gray-400 h-0 opacity-0 group-hover:h-12 group-hover:opacity-100 transition-all duration-500">Custom handcrafted pieces that complete your unique space.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 grid grid-cols-2 gap-8 h-fit">
+                <div class="image-zoom-container aspect-[3/4] translate-y-20">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover image-zoom">
+                </div>
+                <div class="image-zoom-container aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover image-zoom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section class="py-48 bg-[#1c1c1c] text-white">
+        <div class="px-12 mb-32 flex justify-between items-end">
+            <h2 class="heading text-6xl md:text-8xl font-bold leading-none">THE <br> <span class="serif italic font-light text-[#d4a373]">ARCHIVE</span></h2>
+            <div class="max-w-md text-right hidden md:block">
+                <p class="text-white/40 font-light text-lg">A curated selection of our most ambitious projects, where geometry meets soul.</p>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-1 px-1">
+            <div class="relative aspect-[4/5] overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all flex flex-col justify-end p-12">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.4em] text-[#d4a373] mb-4">Stockholm, SE</span>
+                    <h3 class="heading text-2xl font-bold">Nordic Minimal</h3>
+                </div>
+            </div>
+            <div class="relative aspect-[4/5] overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all flex flex-col justify-end p-12">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.4em] text-[#d4a373] mb-4">Milan, IT</span>
+                    <h3 class="heading text-2xl font-bold">Urban Loft</h3>
+                </div>
+            </div>
+            <div class="relative aspect-[4/5] overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all flex flex-col justify-end p-12">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.4em] text-[#d4a373] mb-4">Tokyo, JP</span>
+                    <h3 class="heading text-2xl font-bold">Zen Sanctuary</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-32 px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24">
+            <div class="lg:col-span-2 space-y-12">
+                <h2 class="heading text-4xl font-bold tracking-tighter">VESTA</h2>
+                <p class="text-gray-400 text-xl max-w-md font-light">Join us in the pursuit of spatial perfection. Subscribe for project updates and design insights.</p>
+                <div class="flex gap-12">
+                    <a href="#" class="text-[10px] font-bold uppercase tracking-widest border-b border-black pb-2">Instagram</a>
+                    <a href="#" class="text-[10px] font-bold uppercase tracking-widest border-b border-black pb-2">LinkedIn</a>
+                    <a href="#" class="text-[10px] font-bold uppercase tracking-widest border-b border-black pb-2">Behance</a>
+                </div>
+            </div>
+            <div class="space-y-12">
+                <h4 class="text-xs font-bold uppercase tracking-[0.4em] text-[#d4a373]">Office</h4>
+                <p class="text-gray-500 font-light leading-loose">Via della Spiga 42<br>20121 Milan, Italy<br>info@vestadesign.com</p>
+            </div>
+            <div class="space-y-12 text-right">
+                <h4 class="text-xs font-bold uppercase tracking-[0.4em] text-[#d4a373]">Newsletter</h4>
+                <div class="relative">
+                    <input type="email" placeholder="Email" class="w-full bg-transparent border-b border-black/10 py-4 focus:outline-none focus:border-black transition-colors">
+                    <button class="absolute right-0 bottom-4 text-xs font-bold uppercase">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-32 pt-10 border-t border-black/5 flex justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-400">
+            <div>&copy; 2024 VESTA INTERIORS</div>
+            <div>Built for the Discerning</div>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Reveal
+        gsap.to(".stagger-hero", {
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "power4.out"
+        });
+
+        // Parallax Hero
+        gsap.to("#hero-img", {
+            yPercent: 30,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "section",
+                start: "top top",
+                scrub: true
+            }
+        });
+
+        // Section reveals
+        gsap.utils.toArray("section").forEach(section => {
+            gsap.from(section.querySelectorAll("h2, .image-zoom-container, .group"), {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                },
+                opacity: 0,
+                y: 60,
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power3.out"
+            });
+        });
+    </script>
+</body>
+</html>

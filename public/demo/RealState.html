@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTATE LUXE | Premium Real Estate & Modern Living</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #1e40af;
+            --gold: #b45309;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--primary);
+            overflow-x: hidden;
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        
+        .property-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .property-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .stagger-item { opacity: 0; transform: translateY(30px); }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav py-6 px-10 flex justify-between items-center">
+        <div class="text-2xl font-black tracking-tighter uppercase flex items-center gap-2">
+            <div class="w-8 h-8 bg-blue-900 rounded-lg"></div>
+            Estate Luxe
+        </div>
+        <div class="hidden md:flex gap-10 text-sm font-bold uppercase tracking-widest">
+            <a href="#" class="hover:text-blue-700 transition-colors">Properties</a>
+            <a href="#" class="hover:text-blue-700 transition-colors">Developments</a>
+            <a href="#" class="hover:text-blue-700 transition-colors">Concierge</a>
+        </div>
+        <button class="bg-blue-900 text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-800 transition-all shadow-lg">List Property</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center px-10 hero-clip overflow-hidden">
+        <div class="absolute inset-0 z-[-1]">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover" id="hero-img">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        <div class="max-w-4xl text-white">
+            <h4 class="text-blue-400 font-bold uppercase tracking-[0.4em] mb-6 stagger-item">The Pinnacle of Living</h4>
+            <h1 class="text-7xl md:text-[100px] font-black leading-none mb-10 stagger-item">
+                Discover Your <br> <span class="serif italic text-white/90">Masterpiece.</span>
+            </h1>
+            <p class="text-xl text-white/70 max-w-xl mb-12 stagger-item">Exclusive access to the world's most prestigious properties. From architectural icons to hidden retreats.</p>
+            <div class="flex flex-col md:flex-row gap-6 stagger-item">
+                <div class="bg-white p-2 rounded-full flex items-center shadow-2xl">
+                    <input type="text" placeholder="Location, Neighborhood..." class="bg-transparent px-6 py-2 w-full md:w-64 text-black focus:outline-none">
+                    <button class="bg-blue-900 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-24 px-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div class="space-y-2">
+                <div class="text-4xl font-black">$4.2B+</div>
+                <div class="text-gray-400 text-xs font-bold uppercase tracking-widest">In Transactions</div>
+            </div>
+            <div class="space-y-2">
+                <div class="text-4xl font-black">150+</div>
+                <div class="text-gray-400 text-xs font-bold uppercase tracking-widest">Luxury Units</div>
+            </div>
+            <div class="space-y-2">
+                <div class="text-4xl font-black">24/7</div>
+                <div class="text-gray-400 text-xs font-bold uppercase tracking-widest">Concierge Support</div>
+            </div>
+            <div class="space-y-2">
+                <div class="text-4xl font-black">12</div>
+                <div class="text-gray-400 text-xs font-bold uppercase tracking-widest">Global Offices</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="py-32 px-10 bg-gray-50">
+        <div class="flex justify-between items-end mb-20">
+            <div>
+                <h2 class="text-6xl font-black mb-6">Exquisite <br> <span class="serif italic text-blue-900">Curations</span></h2>
+                <p class="text-gray-500">A handpicked selection of properties that redefine luxury.</p>
+            </div>
+            <button class="text-sm font-bold uppercase tracking-widest border-b-2 border-blue-900 pb-2 hover:text-blue-700 transition-all">Explore Gallery</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Property 1 -->
+            <div class="property-card group cursor-pointer">
+                <div class="relative aspect-[4/5] rounded-[3rem] overflow-hidden mb-8">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">For Sale</div>
+                    <div class="absolute bottom-8 right-8 bg-blue-900 text-white w-14 h-14 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0 shadow-2xl">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </div>
+                </div>
+                <h3 class="text-3xl font-bold mb-2">The Glass Pavilion</h3>
+                <p class="text-gray-500 mb-4 italic serif">Beverly Hills, CA</p>
+                <div class="flex justify-between items-center border-t pt-6">
+                    <div class="text-2xl font-black">$12,500,000</div>
+                    <div class="flex gap-4 text-xs font-bold text-gray-400">
+                        <span>5 BD</span>
+                        <span>|</span>
+                        <span>7 BA</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Property 2 -->
+            <div class="property-card group cursor-pointer mt-12 md:mt-0">
+                <div class="relative aspect-[4/5] rounded-[3rem] overflow-hidden mb-8 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1600607687940-4e524cb350b1?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute top-8 left-8 bg-blue-900 text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">Featured</div>
+                </div>
+                <h3 class="text-3xl font-bold mb-2">Oceanfront Manor</h3>
+                <p class="text-gray-500 mb-4 italic serif">Miami Beach, FL</p>
+                <div class="flex justify-between items-center border-t pt-6">
+                    <div class="text-2xl font-black">$8,250,000</div>
+                    <div class="flex gap-4 text-xs font-bold text-gray-400">
+                        <span>4 BD</span>
+                        <span>|</span>
+                        <span>5 BA</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Property 3 -->
+            <div class="property-card group cursor-pointer mt-12 md:mt-24">
+                <div class="relative aspect-[4/5] rounded-[3rem] overflow-hidden mb-8">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">New Listing</div>
+                </div>
+                <h3 class="text-3xl font-bold mb-2">Skyloft Penthouse</h3>
+                <p class="text-gray-500 mb-4 italic serif">New York, NY</p>
+                <div class="flex justify-between items-center border-t pt-6">
+                    <div class="text-2xl font-black">$15,750,000</div>
+                    <div class="flex gap-4 text-xs font-bold text-gray-400">
+                        <span>3 BD</span>
+                        <span>|</span>
+                        <span>4 BA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-48 px-10 text-center bg-blue-900 text-white rounded-[5rem] mx-4 mb-20 overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        <div class="max-w-4xl mx-auto space-y-16">
+            <h2 class="text-6xl font-black serif italic">Unrivaled Service.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-8 h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold">Property Mgmt</h4>
+                    <p class="text-blue-200/60 text-sm">Full-service management for your investment portfolio.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-8 h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold">Legal Advisory</h4>
+                    <p class="text-blue-200/60 text-sm">Expert guidance on global real estate laws and taxes.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-8 h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold">Private Finance</h4>
+                    <p class="text-blue-200/60 text-sm">Bespoke lending solutions for high-net-worth clients.</p>
+                </div>
+            </div>
+            <button class="bg-white text-blue-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-blue-300 transition-all">Connect with an Agent</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-32 px-10 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-20">
+            <div class="col-span-1 md:col-span-2 space-y-12">
+                <div class="text-3xl font-black tracking-tighter uppercase flex items-center gap-2">
+                    <div class="w-10 h-10 bg-blue-900 rounded-lg"></div>
+                    Estate Luxe
+                </div>
+                <p class="text-gray-400 text-xl font-light max-w-sm">The world's leading luxury real estate brand, serving the most discerning clients for over three decades.</p>
+                <div class="flex gap-8 text-gray-400 text-sm font-bold uppercase tracking-widest">
+                    <a href="#" class="hover:text-blue-900">Instagram</a>
+                    <a href="#" class="hover:text-blue-900">LinkedIn</a>
+                    <a href="#" class="hover:text-blue-900">Twitter</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-10">Company</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-blue-900">About Us</a></li>
+                    <li><a href="#" class="hover:text-blue-900">Global Network</a></li>
+                    <li><a href="#" class="hover:text-blue-900">Sustainability</a></li>
+                    <li><a href="#" class="hover:text-blue-900">Press Center</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-10">Resources</h4>
+                <ul class="space-y-4 text-gray-400 text-sm">
+                    <li><a href="#" class="hover:text-blue-900">Market Reports</a></li>
+                    <li><a href="#" class="hover:text-blue-900">Investment Guides</a></li>
+                    <li><a href="#" class="hover:text-blue-900">Mortgage Calculator</a></li>
+                    <li><a href="#" class="hover:text-blue-900">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-32 pt-10 border-t border-gray-100 flex justify-between items-center text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+            <div>&copy; 2024 Estate Luxe Realty. All rights reserved.</div>
+            <div>E-mail: info@estateluxe.com | Tel: +1 800 LUXE HOME</div>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Reveal
+        gsap.to(".stagger-item", {
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "power4.out",
+            delay: 0.3
+        });
+
+        // Parallax Hero
+        gsap.to("#hero-img", {
+            yPercent: 20,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "section",
+                start: "top top",
+                scrub: true
+            }
+        });
+
+        // Section reveals
+        gsap.utils.toArray("section").forEach(section => {
+            gsap.from(section.querySelectorAll("h2, .property-card, p, .grid > div"), {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                },
+                opacity: 0,
+                y: 50,
+                duration: 1.2,
+                stagger: 0.2,
+                ease: "power3.out"
+            });
+        });
+    </script>
+</body>
+</html>

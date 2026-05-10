@@ -16,7 +16,7 @@ const services = [
   {
     category: 'Creative',
     icon: <Palette className="w-4 h-4" />,
-    items: ['Graphic Design', 'Video Editing'],
+    items: ['Graphic Design', 'Video Editing', 'App Development'],
   },
 ];
 
@@ -62,8 +62,8 @@ export default function Navbar({ onDemoClick }: { onDemoClick?: () => void }) {
                     <stop offset="100%" stopColor="#FF0000" />
                   </linearGradient>
                 </defs>
-                <path d="M20 80L40 20L60 60L80 20V80" stroke="url(#logo-grad)" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M30 80L50 20L70 80" stroke="url(#logo-grad)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" opacity="0.5" />
+                <path d="M25 75V25L75 75V25" stroke="url(#logo-grad)" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M35 75V35L75 75V35" stroke="url(#logo-grad)" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" opacity="0.3" />
               </svg>
             </div>
             <div className="flex flex-col">
@@ -142,6 +142,7 @@ export default function Navbar({ onDemoClick }: { onDemoClick?: () => void }) {
               )}
             </div>
 
+            <Link to="/customise" className="text-[15px] font-semibold text-gray-700 hover:text-[#F65235] transition-colors">Customise</Link>
             <Link to="/blog" className="text-[15px] font-semibold text-gray-700 hover:text-[#F65235] transition-colors">Blog</Link>
             <Link to="/about" className="text-[15px] font-semibold text-gray-700 hover:text-[#F65235] transition-colors">About</Link>
             <Link to="/contact" className="text-[15px] font-semibold text-gray-700 hover:text-[#F65235] transition-colors">Contact</Link>
@@ -186,6 +187,13 @@ export default function Navbar({ onDemoClick }: { onDemoClick?: () => void }) {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About Us
+              </Link>
+              <Link 
+                to="/customise" 
+                className="block text-lg font-bold text-gray-800"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Customise
               </Link>
               <Link 
                 to="/blog" 
