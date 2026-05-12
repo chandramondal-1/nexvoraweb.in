@@ -11,15 +11,10 @@ import {
   Zap,
   Database,
   Cpu,
-  ShieldCheck,
-  Search,
   Layout,
-  MessageSquare,
   ArrowRight,
   Plus,
-  Minus,
-  CheckCircle2,
-  Sparkles
+  CheckCircle2
 } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
