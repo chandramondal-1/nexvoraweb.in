@@ -6,7 +6,7 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HashRouter basename="/nexvoraweb.in/">
+    <HashRouter>
       <App />
     </HashRouter>
   </StrictMode>,
