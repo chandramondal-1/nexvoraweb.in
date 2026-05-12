@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { ChevronDown, ArrowRight, Globe, BarChart, Palette, Briefcase, Layout, MessageSquare, Menu, X } from 'lucide-react';
 
 const services = [
