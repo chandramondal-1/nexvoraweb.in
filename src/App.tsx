@@ -8,13 +8,27 @@ import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 import CustomisePage from './pages/CustomisePage';
-
-
+import GraphicDesignPage from './pages/GraphicDesignPage';
+import VideoEditingPage from './pages/VideoEditingPage';
+import AppDevelopmentPage from './pages/AppDevelopmentPage';
+import SeoPage from './pages/SeoPage';
+import SmoPage from './pages/SmoPage';
+import PaidAdsPage from './pages/PaidAdsPage';
+import WebDevPage from './pages/WebDevPage';
+import WebRedesignPage from './pages/WebRedesignPage';
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/services/graphic-design" element={<GraphicDesignPage />} />
+      <Route path="/services/video-editing" element={<VideoEditingPage />} />
+      <Route path="/services/app-development" element={<AppDevelopmentPage />} />
+      <Route path="/services/seo" element={<SeoPage />} />
+      <Route path="/services/smo" element={<SmoPage />} />
+      <Route path="/services/paid-ads" element={<PaidAdsPage />} />
+      <Route path="/services/website-development" element={<WebDevPage />} />
+      <Route path="/services/website-redesign" element={<WebRedesignPage />} />
       <Route path="/services/:id" element={<ServicePage />} />
       <Route path="/portfolio/testimonials" element={<TestimonialsPage />} />
       <Route path="/portfolio/:id" element={<PortfolioPage />} />
