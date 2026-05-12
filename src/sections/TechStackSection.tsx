@@ -81,7 +81,7 @@ export default function TechStackSection() {
         {/* Left - Image Stack */}
         <div className="relative w-full max-w-md md:max-w-xl">
           <img 
-            src="/images/tech-stack.avif" 
+            src="images/tech-stack.avif" 
             alt="NEXVORA Tech Stack" 
             className="stack-image w-full h-auto drop-shadow-2xl"
           />

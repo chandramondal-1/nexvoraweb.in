@@ -157,7 +157,7 @@ export default function GraphicDesignPage() {
               <div className="absolute -inset-4 bg-gradient-to-r from-[#F65235] to-orange-400 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity" />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-2">
                 <img 
-                  src="/images/hero-creators.jpg" 
+                  src="images/hero-creators.jpg" 
                   alt="Creative Design Process" 
                   className="w-full h-auto rounded-2xl"
                 />

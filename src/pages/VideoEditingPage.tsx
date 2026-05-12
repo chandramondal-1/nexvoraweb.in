@@ -159,7 +159,7 @@ export default function VideoEditingPage() {
                   <Play className="w-8 h-8 fill-current ml-1" />
                 </div>
                 <img 
-                  src="/images/hero-creators.jpg" 
+                  src="images/hero-creators.jpg" 
                   alt="Video Editing Workspace" 
                   className="absolute inset-0 w-full h-full object-cover opacity-80"
                 />

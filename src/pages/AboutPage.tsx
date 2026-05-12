@@ -320,7 +320,7 @@ export default function AboutPage() {
             <div className="group reveal-card">
               <div className="relative overflow-hidden rounded-[40px] bg-slate-100 mb-8 aspect-[4/5] shadow-2xl">
                 <img 
-                  src="/images/arif-new.png" 
+                  src="images/arif-new.png" 
                   alt="Arif Hussain" 
                   className="w-full h-full object-cover transition-all duration-700 scale-110 group-hover:scale-100"
                 />
@@ -337,7 +337,7 @@ export default function AboutPage() {
             <div className="group reveal-card">
               <div className="relative overflow-hidden rounded-[40px] bg-slate-100 mb-8 aspect-[4/5] shadow-2xl">
                 <img 
-                  src="/images/surya-mondal.png" 
+                  src="images/surya-mondal.png" 
                   alt="Surya Mondal" 
                   className="w-full h-full object-cover transition-all duration-700 scale-110 group-hover:scale-100"
                 />

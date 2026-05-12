@@ -181,7 +181,7 @@ export default function AppDevelopmentPage() {
              <div className="relative">
               <div className="absolute -inset-10 bg-[#F65235]/10 blur-[100px] rounded-full" />
               <img 
-                src="/images/hero-creators.jpg" 
+                src="images/hero-creators.jpg" 
                 alt="App Development Team" 
                 className="relative w-full h-auto rounded-[2.5rem] shadow-2xl border-8 border-gray-50"
               />

@@ -19,7 +19,7 @@ const projects = [
     category: 'Live Projects',
     slug: 'live-projects',
     url: 'https://www.sunseatings.com/',
-    image: '/images/sunseatings.png',
+    image: 'images/sunseatings.png',
     description: 'Premium ergonomic office seating solutions.',
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     category: 'Live Projects',
     slug: 'live-projects',
     url: 'https://www.crescentconstruction.co.in/',
-    image: '/images/crescent-construction.png',
+    image: 'images/crescent-construction.png',
     description: 'Modern infrastructure and residential construction.',
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     category: 'Demo Websites',
     slug: 'demo-websites',
     url: '/demo/E-commerce.html',
-    image: '/images/ecommerce-demo.png',
+    image: 'images/ecommerce-demo.png',
     description: 'High-end e-commerce experience with premium animations.',
   },
   {
@@ -59,7 +59,7 @@ const projects = [
     category: 'Demo Websites',
     slug: 'demo-websites',
     url: '/demo/Interior.html',
-    image: '/images/interior-demo.png',
+    image: 'images/interior-demo.png',
     description: 'Sophisticated interior design showcase for luxury brands.',
   },
   {
@@ -67,7 +67,7 @@ const projects = [
     category: 'Demo Websites',
     slug: 'demo-websites',
     url: '/demo/Resort.html',
-    image: '/images/resort-demo.png',
+    image: 'images/resort-demo.png',
     description: 'Full-featured luxury resort landing page with booking system.',
   },
   {
@@ -75,7 +75,7 @@ const projects = [
     category: 'Demo Websites',
     slug: 'demo-websites',
     url: '/demo/Edtech.html',
-    image: '/images/edtech-demo.png',
+    image: 'images/edtech-demo.png',
     description: 'Next-generation educational platform for digital learning.',
   },
   {
@@ -83,7 +83,7 @@ const projects = [
     category: 'Demo Websites',
     slug: 'demo-websites',
     url: '/demo/RealState.html',
-    image: '/images/real-estate-demo.png',
+    image: 'images/real-estate-demo.png',
     description: 'Premium real estate listings for high-value properties.',
   },
   {
@@ -91,21 +91,21 @@ const projects = [
     category: 'Demo Websites',
     slug: 'demo-websites',
     url: '/demo/Restaurent.html',
-    image: '/images/restaurant-demo.png',
+    image: 'images/restaurant-demo.png',
     description: 'Exquisite fine dining experience with a luxury aesthetic.',
   },
   {
     title: 'Maison de Beauté',
     category: 'Live Projects',
     slug: 'live-projects',
-    image: '/images/makeup-demo.png',
+    image: 'images/makeup-demo.png',
     description: 'Luxury cosmetics and beauty e-commerce experience.',
   },
   {
     title: 'Aurora Healthcare',
     category: 'Live Projects',
     slug: 'live-projects',
-    image: '/images/doctor-demo.png',
+    image: 'images/doctor-demo.png',
     description: 'Premium healthcare and wellness platform for modern clinics.',
   }
 ];

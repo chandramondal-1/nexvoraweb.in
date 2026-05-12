@@ -192,7 +192,7 @@ export default function WebDevPage() {
             </div>
             <div className="reveal-card relative">
               <div className="aspect-square bg-slate-100 rounded-[40px] overflow-hidden">
-                <img src="/public/images/makeup-demo.png" alt="Website Development" className="w-full h-full object-cover grayscale-0 group-hover:grayscale hover:scale-105 transition-all duration-700" />
+                <img src="images/makeup-demo.png" alt="Website Development" className="w-full h-full object-cover grayscale-0 group-hover:grayscale hover:scale-105 transition-all duration-700" />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-3xl shadow-2xl border border-slate-100 max-w-[280px]">
                 <p className="text-4xl font-black text-[#F65235] mb-2">500+</p>
