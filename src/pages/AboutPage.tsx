@@ -6,7 +6,7 @@ import {
   Target, 
   Eye, 
   Award, 
-  Clock, 
+   
   ChevronRight, 
   CheckCircle2, 
   Star, 
@@ -24,7 +24,7 @@ import {
   Phone,
   MapPin,
   Calendar,
-  Briefcase,
+  
   TrendingUp,
   Cpu,
   Database,

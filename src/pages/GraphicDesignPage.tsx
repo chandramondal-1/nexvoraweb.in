@@ -7,7 +7,7 @@ import {
   Layers, 
   Printer, 
   Share2, 
-  PenTool, 
+   
   CheckCircle2, 
   ArrowRight,
   Plus,

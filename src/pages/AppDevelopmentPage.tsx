@@ -3,13 +3,13 @@ import Navbar from '../sections/Navbar';
 import Footer from '../sections/Footer';
 import DemoModal from '../components/DemoModal';
 import { 
-  Smartphone, 
+   
   Apple, 
   Smartphone as Android, 
   Globe, 
   Rocket,
-  ShieldCheck,
-  Zap,
+  
+  
   CheckCircle2, 
   ArrowRight,
   Plus,

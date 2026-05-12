@@ -13,7 +13,7 @@ import {
   Plus,
   Minus,
   TrendingUp,
-  BarChart,
+  
   ShieldCheck
 } from 'lucide-react';
 import gsap from 'gsap';

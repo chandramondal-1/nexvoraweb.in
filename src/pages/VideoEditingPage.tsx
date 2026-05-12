@@ -8,7 +8,7 @@ import {
   Clapperboard, 
   Zap,
   CheckCircle2, 
-  ArrowRight,
+  
   Plus,
   Minus,
   Play
